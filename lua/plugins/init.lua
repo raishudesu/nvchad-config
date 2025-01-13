@@ -56,5 +56,9 @@ return {
         "tsx",
       },
     },
+    {
+      "pantharshit00/vim-prisma",
+      ft = "prisma", -- Load only for .prisma files
+    },
   },
 }

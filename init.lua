@@ -41,3 +41,10 @@ vim.filetype.add {
     prisma = "prisma",
   },
 }
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.txt", "*.md", "*.py" },
+  callback = function()
+    vim.cmd("silent! !codespell " .. vim.fn.expand "%:p")
+  end,
+})
